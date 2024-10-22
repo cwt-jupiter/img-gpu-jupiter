@@ -2,18 +2,18 @@
 
 # IMG GPU PowerVR drivers for SpacemiT K1-x boards.
 
-pkgname=img-gpu-powervr
+pkgname=img-gpu-k1x
 pkgver=1.0.15
 pkgrel=1
 pkgdesc="Imagenation GPU DDK for SpacemiT K1-x boards"
-url="${_3rdpart_repo}/tree/JH7110_VisionFive2_devel"
+url="https://gitee.com/bianbu-linux/img-gpu-powervr"
 arch=(riscv64)
 license=(BSD-3-Clause)
 provides=(opengl-driver vulkan-driver)
 optdepends=('libglvnd: to use opengl'
 	    'vulkan-icd-loader: to use vulkan'
 	    'ocl-icd: to use opencl')
-source=("img-gpu-powervr-v${pkgver}.tar.gz::https://gitee.com/bianbu-linux/${pkgname}/repository/archive/v${pkgver}.tar.gz"
+source=("img-gpu-powervr-v${pkgver}.tar.gz::${url}/repository/archive/v${pkgver}.tar.gz"
 	'img-gpu-firmware-mkinitcpio.conf'
 	'90-img-gpu.rules'
 	'IMG.icd')
@@ -24,7 +24,7 @@ b2sums=('1bd3ac3bcbceead56573fc2b01c4fdc80f8ba1f366ba7ba37bc988644072d67f861de26
 options=(!strip)
 
 package() {
-    cd "${srcdir}/${pkgname}-v${pkgver}/target"
+    cd "${srcdir}/img-gpu-powervr-v${pkgver}/target"
 
     # Config files
     install -Dm644 etc/powervr.ini "${pkgdir}/etc/powervr.ini"
