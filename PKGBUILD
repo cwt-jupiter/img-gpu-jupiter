@@ -3,7 +3,7 @@
 # IMG GPU PowerVR drivers for SpacemiT K1-x boards.
 
 pkgname=img-gpu-k1x
-pkgver=1.0.15
+pkgver=2.0.2
 pkgrel=1
 pkgdesc="Imagenation GPU DDK for SpacemiT K1-x boards"
 url="https://gitee.com/bianbu-linux/img-gpu-powervr"
@@ -17,7 +17,7 @@ source=("img-gpu-powervr-v${pkgver}.tar.gz::${url}/repository/archive/v${pkgver}
 	'img-gpu-firmware-mkinitcpio.conf'
 	'90-img-gpu.rules'
 	'IMG.icd')
-b2sums=('1bd3ac3bcbceead56573fc2b01c4fdc80f8ba1f366ba7ba37bc988644072d67f861de265c4ef4f7433efd9c27b047d1bab83ef2aaa849e7c30956363551fb607'
+b2sums=('f3788ab18badfe53302b1b9db31de026b359dadef015adbf1e26939946291a3a44c6e3ea97ffbff7f8b90d7e69cbb1a73f5e32bbeba35426c08ca2d47bb71342'
         '016f15dffeef7f1a4a173a74bbdf545640a62aa1c2b95efa49f00e22da26db12cf711d4811f3f7f6d76e489700194d44a02f060000aa617bf235709a9c03d7e9'
         'c84d76962259a47cb056002c4285c7efa9fa51b95cbc7f9fcecade66c05b97250db712ea8006a1b894a226326712e4898f6d6d130826e141ec25b93496bf0569'
         '975dc0305ecd0b6c9f7bb3960c38552d11d85b6b72907e5be0ca6326246b7f75ae67f3f364c91285b52bab05e1da2b2fd146119ec5eff6e6a15e4c38be3fee69')
