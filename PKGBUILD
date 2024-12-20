@@ -4,7 +4,7 @@
 
 pkgname=img-gpu-k1x
 pkgver=2.0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Imagenation GPU DDK for SpacemiT K1-x boards"
 url="https://gitee.com/bianbu-linux/img-gpu-powervr"
 arch=(riscv64)
@@ -29,7 +29,7 @@ package() {
     # Config files
     install -Dm644 etc/powervr.ini "${pkgdir}/etc/powervr.ini"
     install -Dm644 etc/vulkan/icd.d/powervr_icd.json "${pkgdir}/etc/vulkan/icd.d/powervr_icd.json"
-    install -Dm644 usr/share/X11/xorg.conf.d/00-noglamoregl.conf "${pkgdir}/usr/share/X11/xorg.conf.d/00-noglamoregl.conf"
+    install -Dm644 usr/share/X11/xorg.conf.d/00-noglamoregl.conf "${pkgdir}/usr/share/X11/xorg.conf.d/00-noglamoregl.conf.DISABLED"
     install -Dm644 $srcdir/IMG.icd "${pkgdir}/etc/OpenCL/vendors/IMG.icd"
 
     # Library files
